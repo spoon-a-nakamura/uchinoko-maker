@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Name
 
-## Getting Started
+## 開発コマンド
 
-First, run the development server:
+- 依存関係のインストール
+`yarn`
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- 開発
+`yarn dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- プロダクションビルド
+`yarn export`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- LINT
+`yarn lint`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- フォーマット（prettier）
+`yarn format`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 開発環境
+- Next.js
+- TypeScript（ArrowJS）
 
-## Learn More
+## 開発環境の中身
+| 開発ディレクトリ | 内容 |
+| ---- | ---- |
+| src | 開発ソースコード |
+| public | 加工なしにホスティングする対象 |
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| 環境ファイル |　内容 |
+| ---- | ---- |
+| .next | next本体 |
+| .vscode | settings.json | 共有したいVSCodeの設定 |
+| .babelrc | babelの設定（NextPresetをそのまま採用） |
+| .eslintrc.js | eslintの設定 |
+| .prettierrc | prettierの設定 |
+| next-env.d.ts | TypeScriptの読み込み設定 |
+| next.config.js | Nextの上書き設定 |
+| package.json | 開発コマンドとパッケージの管理 |
+| README.md | README |
+| tsconfig.json | TypeScriptの設定 |
+| yarn.lock | パッケージの依存関係の管理 |

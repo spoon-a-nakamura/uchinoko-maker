@@ -1,19 +1,37 @@
 {
-  "name": "u",
+  "name": "name",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "export": "rimraf out && rimraf .next && next build && next export",
+    "lint": "eslint src --ext .ts,.tsx",
+    "format": "prettier --write src"
   },
   "dependencies": {
-    "next": "10.2.3",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.17",
+    "gsap": "^3.6.1",
+    "lodash": "^4.17.21",
+    "next": "10.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.32.0",
+    "react-player": "^2.9.0",
+    "ress": "^4.0.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.11",
-    "typescript": "4.3.2"
+    "@babel/core": "^7.14.3",
+    "@emotion/babel-plugin": "^11.3.0",
+    "@types/lodash": "^4.14.170",
+    "@types/react": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.26.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
   }
 }
