@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build": "next build",
     "export": "rimraf out && rimraf .next && next build && next export",
     "lint": "eslint src --ext .ts,.tsx",
     "format": "prettier --write src"
