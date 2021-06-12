@@ -11,8 +11,8 @@ import Footer from '../components/app/Footer';
 import { colors, useCustomVhProperty } from '../styles/utils';
 import { adobeLoader } from '../utils/adobeLoader';
 
-const baseUrl = '';
-const siteTitle = '';
+export const baseUrl = '';
+export const siteTitle = '';
 const siteDescription = '';
 const twitterSite = '';
 const author = '';

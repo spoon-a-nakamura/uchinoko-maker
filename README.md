@@ -1,4 +1,4 @@
-# うちのこメーカー
+# NAME
 
 ## 開発コマンド
 
@@ -10,6 +10,9 @@
 
 - プロダクションビルド
 `yarn export`
+
+- デプロイ用ビルド
+`yarn build`
 
 - LINT
 `yarn lint`

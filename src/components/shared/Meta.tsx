@@ -1,9 +1,7 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { VFC } from 'react';
-
-const baseUrl = '';
-const siteName = '';
+import { baseUrl } from '../../pages/_app';
 
 export type MetaProps = {
   title: string;
@@ -27,7 +25,6 @@ const Meta: VFC<MetaProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonicalUrl} />
       {/* <meta property="og:image" content={`${baseUrl}${ogImage}`} /> */}
-      <meta property="og:site_name" content={siteName} />
       <meta name="twitter:card" content="summary_large_image" />
       <link rel="canonical" href={canonicalUrl} />
     </Head>
