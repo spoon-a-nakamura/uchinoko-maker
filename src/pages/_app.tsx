@@ -11,12 +11,12 @@ import Footer from '../components/app/Footer';
 import { colors, useCustomVhProperty } from '../styles/utils';
 import { adobeLoader } from '../utils/adobeLoader';
 
-export const baseUrl = '';
-export const siteTitle = '';
-const siteDescription = '';
-const twitterSite = '';
-const author = '';
-const themeColor = '';
+export const baseUrl = 'https://uchinoko-maker.vercel.app/';
+export const siteTitle = 'うちのこメーカー';
+const siteDescription = 'うちのこメーカー';
+const twitterSite = 'studio_spoon';
+const author = 'STUDIO SPOON';
+const themeColor = '#eee';
 const GtagId = '';
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => {
