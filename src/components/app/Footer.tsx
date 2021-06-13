@@ -1,14 +1,9 @@
 import { VFC } from 'react';
 import styled from '@emotion/styled';
-import Container from '../app/Container';
 import { colors } from '../../styles/utils';
 
 const Footer: VFC = () => {
-  return (
-    <Root>
-      <Container>FOOTER</Container>
-    </Root>
-  );
+  return <Root>FOOTER</Root>;
 };
 export default Footer;
 

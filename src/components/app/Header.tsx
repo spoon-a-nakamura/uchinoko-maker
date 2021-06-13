@@ -21,6 +21,8 @@ const Header: VFC = () => {
 
 export default Header;
 
-const Root = styled.header``;
+const Root = styled.header`
+  margin-bottom: auto;
+`;
 
 const Contents = styled.div``;

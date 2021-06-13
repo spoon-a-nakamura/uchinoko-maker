@@ -7,9 +7,10 @@ import { fontFace } from '../styles/fonts';
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Header from '../components/app/Header';
-import Footer from '../components/app/Footer';
+// import Footer from '../components/app/Footer';
 import { colors, useCustomVhProperty } from '../styles/utils';
 import { adobeLoader } from '../utils/adobeLoader';
+import Container from '../components/app/Container';
 
 export const baseUrl = 'https://uchinoko-maker.vercel.app/';
 export const siteTitle = 'うちのこメーカー';
@@ -73,9 +74,11 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
         ></script>
       </Head>
       <Global styles={globalStyle} />
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <Container>
+        <Header />
+        <Component {...pageProps} />
+        {/* <Footer /> */}
+      </Container>
     </>
   );
 };
@@ -87,8 +90,8 @@ const globalStyle = css`
   html,
   body {
     font-size: 16px;
-    color: ${colors.textBlack};
-    background: ${colors.backGroundWhite};
+    color: ${colors.black};
+    background: ${colors.white};
     text-size-adjust: 100%;
     font-family: ab-kokoro-no2, -apple-system, BlinkMacSystemFont, 'Segoe UI',
       'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
