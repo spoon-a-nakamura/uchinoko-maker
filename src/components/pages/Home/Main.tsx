@@ -78,7 +78,7 @@ const Main: VFC = () => {
                         selectedId={index + 1}
                       >
                         <Thumbnail
-                          src={`/assets/images/cats/${type.value}/${
+                          src={`/assets/images/cats/${type.value}/thumbnails/${
                             index + 1
                           }@2x.png`}
                           alt=""
