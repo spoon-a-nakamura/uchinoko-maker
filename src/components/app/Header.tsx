@@ -14,7 +14,9 @@ import styled from '@emotion/styled';
 const Header: VFC = () => {
   return (
     <Root>
-      <Contents>Header</Contents>
+      <Contents>
+        <Logo src="/assets/images/common/header/logo.svg" alt="" />
+      </Contents>
     </Root>
   );
 };
@@ -25,4 +27,13 @@ const Root = styled.header`
   margin-bottom: auto;
 `;
 
-const Contents = styled.div``;
+const Contents = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Logo = styled.img`
+  margin: 20px;
+  width: 100%;
+  max-width: 60%;
+`;

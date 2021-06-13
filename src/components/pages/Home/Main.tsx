@@ -138,7 +138,7 @@ const MainImageWrapper = styled.div`
 `;
 
 const MainImage = styled.div`
-  width: 80%;
+  width: ${sppx(300)};
   position: relative;
   height: ${sppx(300)};
 `;
@@ -150,7 +150,7 @@ const BodyImage = styled.img`
 const EyeImage = styled.img`
   position: absolute;
   display: block;
-  transform: scale(0.45) translate(${sppx(-15)}, ${sppx(45)});
+  transform: scale(0.45) translate(${sppx(5)}, ${sppx(60)});
 `;
 const SelectShapesWrapper = styled.div`
   background: ${colors.powderBlue};
