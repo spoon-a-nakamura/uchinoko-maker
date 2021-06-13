@@ -2,6 +2,7 @@ import { VFC } from 'react';
 import styled from '@emotion/styled';
 import { useState } from 'react';
 import { colors } from '../../../styles/utils';
+import { sppx } from '../../../styles/sizes';
 
 const types = [
   {
@@ -49,21 +50,27 @@ const Main: VFC = () => {
 
   const setShapesState = (typesIndex: number, selectIndex: number) => {
     setShapeId((currentStates) => {
-      const newShapesState = currentStates.map((currentState, stateIndex) => {
-        console.log(`stateIndex${stateIndex}`);
-        return typesIndex - 1 === stateIndex ? selectIndex : currentState;
-      });
+      const newShapesState = currentStates.map((currentState, stateIndex) =>
+        typesIndex - 1 === stateIndex ? selectIndex : currentState,
+      );
       return newShapesState;
     });
   };
+  console.log(shapeId[0]);
   return (
     <>
       <Root>
         <MainImageWrapper>
-          <MainImage
-            src={`/assets/images/cats/body/${shapeId[0]}@2x.png`}
-            alt=""
-          />
+          <MainImage>
+            <BodyImage
+              src={`/assets/images/cats/body/thumbnails/${shapeId[0]}@2x.png`}
+              alt=""
+            />
+            <EyeImage
+              src={`/assets/images/cats/eye/main/${shapeId[2]}@2x.png`}
+              alt=""
+            />
+          </MainImage>
         </MainImageWrapper>
         <SelectShapesWrapper>
           {types.map((type) => {
@@ -129,8 +136,21 @@ const MainImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const MainImage = styled.img`
+
+const MainImage = styled.div`
   width: 80%;
+  position: relative;
+  height: ${sppx(300)};
+`;
+const BodyImage = styled.img`
+  position: absolute;
+  display: block;
+  object-fit: contain;
+`;
+const EyeImage = styled.img`
+  position: absolute;
+  display: block;
+  transform: scale(0.45) translate(${sppx(-15)}, ${sppx(45)});
 `;
 const SelectShapesWrapper = styled.div`
   background: ${colors.powderBlue};
@@ -140,24 +160,24 @@ const SelectShapes = styled.ul`
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
-  padding: 10px;
+  padding: ${sppx(10)};
 `;
 type SelectShapeProps = {
   shapeId: number;
   selectedId: number;
 };
 const SelectShape = styled.li<SelectShapeProps>`
-  width: calc(25% - 10px);
+  width: calc(25% - ${sppx(10)});
   background: ${colors.white};
   border-radius: 16px;
-  margin: 5px;
-  border: 3px solid;
+  margin: ${sppx(5)};
+  border: ${sppx(3)} solid;
   border-color: ${({ shapeId, selectedId }) =>
     shapeId === selectedId ? colors.aquaBlue : colors.white};
 `;
 const Thumbnail = styled.img`
   cursor: pointer;
-  padding: 5px;
+  padding: ${sppx(5)};
 `;
 
 const SelectTypesWrapper = styled.div`
@@ -168,7 +188,7 @@ const SelectTypes = styled.ul`
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 10px;
+  padding: ${sppx(10)};
   width: fit-content;
 `;
 type SelectTypeProps = {
@@ -177,20 +197,20 @@ type SelectTypeProps = {
 };
 const SelectType = styled.li<SelectTypeProps>`
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: ${sppx(50)};
+  height: ${sppx(50)};
   background: ${colors.white};
   border-radius: 100px;
-  margin: 5px;
+  margin: ${sppx(5)};
   border: 2px solid;
   border-color: ${({ typeId, selectedId }) =>
     typeId === selectedId ? colors.shellPink : colors.white};
-  margin-bottom: 20px;
+  margin-bottom: ${sppx(20)};
 `;
 const SelectTypeThumbnail = styled.img``;
 
 const SelectTypeLabel = styled.p`
   text-align: center;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: ${sppx(5)};
 `;
